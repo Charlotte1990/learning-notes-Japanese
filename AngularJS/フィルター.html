@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Angularの練習</title>
+    <script src="https://code.angularjs.org/angular-1.0.1.min.js"></script>
+    <script src="myscript2.js"></script>
+</head>
+<body>
+    <h1>AngularJSの練習</h1>
+    <div ng-controller="mainCtrl">
+    
+        <p>{{25 * 500|number}}</p>
+        <p>{{25 * 500|currency:"￥"}}</p>
+        <p>{{today|date:'yyyy-MM-dd'}}</p>
+        
+        <p>{{users.length}} users.</p>
+        <ul>
+            <li ng-repeat="user in users">
+                {{user.name|uppercase}} {{user.score|number:4}}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
