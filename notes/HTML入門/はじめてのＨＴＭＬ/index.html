@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja"> <!--日本語-->
+ <head>
+    <meta charset="utf8">
+    <meta name="description" content="初めてのHTML文書です。">
+    <title>初めてのHTML</title>
+    
+    <!-- コメント-->
+    <!--
+    <style>
+      body {background: skyblue;}
+    </style>
+    -->
+    
+    <link rel="stylesheet" href="mystyles.css">
+ </head>
+ <body>
+ 
+ <!-- グローバル属性
+ id:一つしかない要素
+ class: 複数ある要素
+ style:スタイルを直接指定
+ -->
+       <p id="message">こんにちは</p>
+  <!-- <p class="message active">こんにちは</p>
+     <p class="message" style="background:skyblue;">こんにちは</p>
+     -->
+ <!-- 
+ header:
+ footer:
+ nav: ナビゲーション
+ article：独立しているコンテンツ
+ aside:副次的なコンテンツ
+ section：それ以外の情報の塊
+ h1-h6 
+  -->  
+  
+ <!--
+   p:段落
+   hr:水平線
+   pre: 改行や字下げを保持
+   blockquote:引用
+   div:スタイリング
+ -->
+ 
+ <!--
+ ol (ordered list)/ul(unordered list)/ li (list item)
+ dl(definition list)/dt(difinition term)/dd(definition description)
+ -->
+ 
+ <!--
+ strong-重要なところ
+ br-改行
+ span-
+ -->
+ 
+ <!--
+ a:リンク
+ target="_blank" 新しいページを開く
+ <a href="#stuff">:ページ内リンク
+  -->
+  
+<!--
+table
+thead
+tbody
+ty: table row
+th: table header
+td: table data
+-->
+
+<!--
+form
+  action:どこに送るか？
+  method：get/post
+  input
+-->
+
+<!--
+input
+   text
+   submit
+   password
+   hidden
+-->
+
+<!--
+textarea
+button
+-->
+
+<!--
+input
+   checkbox
+   radio
+label
+-->
+
+<!--
+select
+option
+-->
+
+<!--
+input
+    email
+    number
+    date
+    ブロウザーのバージョンによって使えられない場合もある
+-->
+
+<!--
+数値文字参照
+文字実体参照
+
+-->
+<!--
+&#60;
+&lt;
+-->
+    <article>
+         <h1>文字参照</h1>
+         <p>「&lt;p&gt;タブを段落です」 </p>
+         <input type="type" value="区切り文字は&reg;です">
+        <p>「この記号の文字参照は&amp;quot;です」</p>
+    </article>
+    
+     <article>
+       <h1>アンケート</h1>
+        <form action="survey.php" method="post"  novalidate> 
+        
+        <p>
+            コメント:
+            <textarea name="comment" cols="40" rows="5">コメント</textarea>
+        </p>
+        
+           <!--<p>メールアドレス：<input type="text" name="email" size="50" maxlength="10"
+           value="yukoujj"></p>-->
+           <p>メールアドレス：<input type="email" name="email" size="50"placeholder="please enter email" required></p>
+           <p>料金：<input type="number" name="price"></p>
+           <p>誕生日：<input type="date" name="birthday"></p>
+           
+           <!--<p>City:
+                <select name="city">
+                   <option value="tokyo">Tokyo</option>
+                   <option value="nagoya" selected>Nagoya</option>
+                   <option value="osaka">Osaka</option>
+                   <option value="kyouto">Kyouto</option>
+                   <option value="fukuoka">Fukuoka</option>
+                   
+                </select>
+           </p>
+           -->
+           <p>City:
+                <select name="city" multiple size="5">
+                   <option value="tokyo">Tokyo</option>
+                   <option value="nagoya" selected>Nagoya</option>
+                   <option value="osaka">Osaka</option>
+                   <option value="kyouto">Kyouto</option>
+                   <option value="fukuoka">Fukuoka</option>
+                   
+                </select>
+           </p>
+           
+           <p>ログイン：<input type="password" name="password"></p>
+              <p>
+                   Phone:
+                   <label><input type="checkbox" name="phone" value="android" checked> Android</label>
+                   <input type="checkbox" name="phone" value="iphone" id="iphone"><label for="iphone"> iPhone</label>
+              </p>
+              
+               <p>
+                  Color:
+                   <input type="radio" name="color" value="red" >Red
+                   <input type="radio" name="color" value="blue">Blue
+              </p>
+              
+          <input type="hidden" name="use_id" value="23423">
+       
+           <p>
+           <button type="submit"><strong>送信！</strong></button>
+           </p>
+           <p>
+           <button type="button">処理をする！</button>
+           </p>
+            <p><input type="submit" value="送信！" disabled></p>
+        </form>
+     </article>
+
+    <header>
+     <h1>おいしいごはん！</h1>
+     <p><img src="kao.jpg" width="170" height="150" alt="カオマンガ"></p>
+     
+     <table>
+        <thead>
+             <tr>
+                <th>Size</th><th>Price</th>
+             </tr>
+        </thead>
+        <tbody>
+             <tr>
+                <td>S</td><td>150</td>
+             </tr>
+             <tr>
+                <td>M</td><td>180</td>
+             </tr>
+              <tr>
+                <td>L</td><td>210</td>
+             </tr>
+             <tr>
+                <td colspan="2">free for kids!</td>    <!--列の結合 -->
+             </tr>
+        </tbody>
+        </table>
+      
+      <nav>
+    <p> - ホーム</p>
+    <p> - このサイトについて</p>     
+    <p>- プロフィール</p>
+      </nav>
+   </header>
+  
+    <section>
+       <h1>今月のごはん</h1>
+     <article>
+      <h1>おいしいごはん #12</h1>
+       <div style="background:pink;">
+          <p>至高の<br><strong>TKG</strong>→<a href="more.html"  target="_blank">もっと見る</a> →<a href="#stuff">定義に</a></p>
+    
+           <h2>材料</h2>
+       <ul>
+          <li><span style="color:gold;">卵</span></li>
+          <li>しょうゆ</li>
+          <li>ごはん</li>
+       </ul>
+     
+       <h2>手順</h2>
+        <ol>
+           <li><a href="http://dotinstall.com" target="_blank">まぜる</a></li>
+           <li>かける</li>
+        </ol>
+   
+          <h2 id="stuff">定義</h2>
+             <dl>
+              <dt>TKG</dt>
+              <dd>卵かけごはん</dd>
+             </dl>
+   
+        <hr>
+        <p>ところで...</p>
+        </div>
+        <pre>
+              poem
+                poem
+                  poem
+     </pre>
+        <blockquote>
+            TKG最高！by @taguchi
+        </blockquote>
+       </article>
+   </setion>
+     <hr>
+   
+    <section>
+       <h1>新着おいしいごはん</h1>
+         <article>
+         <h1>おいしいごはん #32</h1>
+       はもしゃぶ
+          </article>
+     </setion>
+ 
+  <aside>
+  <h1>おすすめレシピ本</h1>
+  </aside>
+  
+  <footer>
+   このサイトは@taguchiによって運営されています
+  </footer>
+ 
+
+ </body>
+</html>    

@@ -1,0 +1,17 @@
+/*
+擬似クラス
+-：first-child
+*/
+
+/*li:last-child*/
+ /*li:nth-child(3)*/
+ /*li:nth-child(odd)*/
+ /*li:nth-child(even)*/
+ /*li:nth-child(3n+1)*/
+ /*li:nth-last-child(4)*/ /*最後から何番目*/
+ li:only-child  /*子要素が一つしかない*/
+
+ {
+   background: violet;
+ 
+ }

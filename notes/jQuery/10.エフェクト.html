@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+     <meta charset="utf-8">
+     <title>jQuery</title>
+    
+ </head>
+  
+  <body>
+      <p>jQueryの練習</p>
+     <div id="box" style="width: 100px; height:100px; background:red;"></div>
+       
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script>
+            $(function(){
+              
+                 // $('#box').hide('slow');         //ゆっくり
+                 // $('#box').hide(800);            //800ミリ秒後に消える
+                 
+                 // $('#box').fadeOut(800); 
+                 // $('#box').fadeIn(800); 
+                 
+                 // $('#box').toggle(800);
+                 // $('#box').toggle(800);
+                 // $('#box').toggle(800);
+                 // $('#box').toggle(800);
+                 // $('#box').toggle(800);
+                    
+                    $('#box').fadeOut(800, function(){
+                    
+                       alert("gone!");             //消えた後実行
+                    
+                    });              
+              
+        });
+      </script>
+      
+  </body>
+  </html>
+     

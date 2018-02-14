@@ -1,0 +1,455 @@
+/* p { color: skyblue; } */ 
+ 
+ /*
+ セレクタ｛プロパティ：値;｝
+ セレクタ｛
+   プロパティ：値;
+   プロパティ: 値;
+ ｝
+ * ユニバーサルセレクタ
+ 要素名 p h1 div
+ #id
+ .class
+ */
+ 
+ 
+ /* *{color: skyblue;} 
+    h1 {color: skyblue;}
+    #first {color: orange;}
+    .points{color:violet;}
+*/   
+   
+
+/*
+セレクタ
+a, b
+a b
+a > b
+a + b
+ab
+*/
+ /* h1,p{color: skyblue;}
+  div span {color: skyblue;}
+  div > span {color: skyblue;}    divの直下にあるspanだけがstyle
+  p + p {color: skyblue;}       pの次にあるp要素
+  p.points {color: skyblue;}   p要素であって尚且つpointのclassがついてるもの
+  */
+  
+  
+ /*
+ 属性セレクタ
+ */
+/* a[title] {color: skyblue;} 
+   a[href="http://google.com"] {color: orange;} 
+   a[class~="search"] {color: violet;}
+ */
+ 
+ 
+ /*
+ セレクタ擬似クラス
+ */
+ 
+ /*
+ ul li:first-child {color: skyblue;}
+ a:link  {color: violet;}
+ a:visited  {color: orange;}
+ a:hover {color: pink;}
+ a:active  {color: red;}
+ 
+ input:focus { background: skyblue; }
+ */
+ 
+ /*
+セレクタ擬似要素
+*/
+
+/* p:first-line { color: skyblue;}  */
+/* p:first-letter { color: skyblue;}*/
+
+/*
+ p:before {
+ content: "-->"
+  }
+
+ p:after{
+  content:"<--"
+  }
+*/
+
+
+/* セレクタ詳細度
+(a) style=""    
+(b) id
+(c) id以外の属性/擬似クラス
+(d) 要素/擬似要素
+
+優先度：(a)>(b)>(c)>(d)
+後ろに書いた内容のほうが優先度が高い
+(a)のstyleはhtmlファイルに設定している
+!important をつけて、優先度を一番高くになる
+*/
+/* 
+   0,0,0,1  
+ a{color:skyblue !important;}
+   0,0,1,1  
+ a.link {color:pink;}
+   0,0,1,1  
+ a.search {color:orange;}
+   0,1,0,1  
+ a#site {color:red;}
+*/
+
+/* 値
+   -長さ
+    -px
+    -em  何倍
+    -%
+   色
+    -名前
+    -RGB
+     -Red 0-f / 00-ff / 0-255 / 0%-100%
+     -Green
+     -Blue
+ */
+ 
+ /*  body {font-size: 16px;}
+   h1{font-size: 2em; }      32px  
+   h2 {font-size: 150%; }    24px  
+
+ 
+   h1{color:blue;} 
+   h1{color:#00f;}
+   h1{color:#0000ff;} 
+   
+   h1{color:rgb(0,255,0);} 
+   h2{color:rgb(0%,100%,0%);}
+ */
+
+
+/*
+ボックスモデル
+*/
+
+/*  body, html { height: 100%;}
+  div {
+     background: silver;
+     width: 200px; 
+     width: 50%;  
+     height: 100px; 
+     height: 50%; 
+    }
+*/
+
+/*
+border
+
+border-color:
+border-width:
+border-style:solid/dotted/dashed/double/inset/outset
+*/
+ 
+/*
+div{
+ border-color: orange;
+ border-width: 4px;
+ border-style: outset;
+ 
+ border: red 4px dotted  
+ border-top: blue 2px dashed 
+}
+  */
+
+/*
+padding-top: 10px;
+padding-right: 10px;
+padding-left:10px
+padding-bottom:10px
+
+padding:
+  all 
+  二つ： top/bottom   right/left
+  三つ： top  right/left  bottom
+  四つ： top  right  bottom  left
+*/
+
+/*
+  body{margin: 0;}
+  div{
+  background: green;
+  padding: 10px 50px; 
+  padding: 10px 20px 30px 40px 
+  }
+*/
+
+/*
+marginの相殺（margin collapsing）:兄弟関係の要素で、上下に接するマージンは
+大きいほうだけがイキ（小さいほうはボツ）になったり、親と子要素のマージンで
+は、子のマージンが親の外に突き出したり...
+
+margin-top: 10px;
+margin-right: 10px;
+margin-left:10px
+margin-bottom:10px
+
+margin:
+all 
+  二つ： top/bottom   right/left
+  三つ： top  right/left  bottom
+  四つ： top  right  bottom  left
+*/
+/*
+body{margin: 0;}
+
+ div#box1{
+  background: silver;
+  margin: 10px 20px 30px;
+  }
+  
+ div#box2{
+  background: orange;
+  margin: 20px;
+  }
+*/
+    
+ /*
+ 文字に関するプロパティ
+ text 
+ -color: orange;
+ -font-size: 14px;
+ -font-family: Arial, Helvetica;
+ -font-weight: bpld/normal;
+ -test-align: right?center/left;
+ -text-decoration:
+ underline/line-through/none
+ */
+ 
+ /*p{
+   color: blue;
+   font-size: 24px;
+   font-family: Arial;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: underline line-through;
+ }
+ */
+ 
+ 
+ /*
+ list
+ -list-style-type:
+ disc/circle/square/decimal/lower-alpha
+ -list-style-image:
+ -list-style-position: inside/outside
+ -list-style: すべてのプロパティを一気に指定する
+ */
+         
+/*ul{
+  list-style:inside decimal;
+  list-style:outside lower-alpha;
+  list-style: url('smile.png')
+   circle;
+}
+*/
+
+
+/*
+cursor
+*/
+/*
+.help{cursor: help;}       ヘルプカーソル
+.dragme{cursor: move;}     移動カーソル
+.clickme{cursor: pointer;} リンクカーソル
+.smile {cursor: url('smile.png'), auto;}  auto:ブラウザが自動的に選択したカーソル
+*/
+
+
+/*background*/
+
+
+/*
+ body {
+   background-color: silver;
+   background-image: url('bg.jpg');
+   background-repeat: no-repeat;
+   background-repeat: repeat-x;
+   background-position: 10px 10px;
+   background-position: top center;
+   background-attachment: scroll;
+   background-attachment:fixed;
+   
+   background: url('bg.jpg') no-repeat fixed;
+}
+*/
+
+
+/*
+display:
+- block
+- inline   左に詰める
+- list-item
+- inline-block
+- none
+*/
+
+/*
+h1,p,span,a {
+border:1px solid #ddd;
+}
+
+h1,p {
+ width:120px;
+ display: inline;
+ display: inline-block;
+}
+span{
+display: none;
+}
+*/
+
+
+/*
+display: table
+*/
+/*
+.container{
+ display: table;
+ width: 300px;
+ }
+ .row{
+  display: table-row;
+ }
+.box {
+  display: table-cell;
+  width: 100px;
+}
+.gray{background: gray;}
+.silver {background: silver;}
+.orange {background: orange;}
+*/
+
+
+/*
+position 
+  static  （初期値）
+  relative （staticの1からずらして表示する）
+  fixed  （ 画面に固定される）（配置の基準点は左上）
+  absolute (親ボックスにpositionプロパティのstatic以外の値が指定されている場合には、
+            親ボックスの左上が基準位置となります。
+            親ボックスにpositionプロパティのstaticが指定されて場合には、
+            ウィンドウ全体の左上が基準位置となります。
+*/
+/*
+ body{margin: 0;}
+ #box1 {width: 100px; height: 50px;}
+ #box2 {width: 100px; height: 50px;}
+ #box3 {width:  50px; height: 25px;}
+ 
+#box1 {
+   background: gray;
+   position: relative; 
+   position: fixed;
+   top: 10px;
+   left: 10px;
+   
+}
+
+#box2 {
+   background: silver;
+   position: static;
+   position: relative;
+}
+
+#box3 {
+ background: orange;
+ position: absolute;
+ top: 10px;
+ left: 10px;
+}
+*/
+
+
+/*
+z-index  重なり順を管理する
+  -position:static以外の要素
+  -z-indexの値が多きほど上に来る
+
+overflow  box要素の中のコンテンツが幅と高さを超えて存在する
+   visible
+   hidden
+   scroll
+*/
+
+/*
+body{margin: 0;}
+ #box1, #box2, #box3 {
+   width: 100px; 
+   height: 50px;
+   position: absolute;
+   
+   }
+  
+#box1 {
+   background: gray;
+   top: 10px;
+   left:10px;
+   z-index: 3;
+   overflow: hidden;
+   overflow: scroll;  
+}
+
+#box2 {
+   background: silver;
+    top: 20px;
+    left:20px;
+    z-index: 1;
+   }
+   
+#box3 {
+ background: orange;
+   top: 30px;
+   left:30px;
+   z-index: 2;
+ }
+ */
+ 
+ 
+ /*
+ line-height
+ vertical-align: baselinetop/bottom/middle インライン要素とtableの
+                セル要素の縦位置の揃え方を指定出来ます。
+ */
+ 
+ /*
+ p{
+   border: 1px solid #ddd;
+   font-size: 24px;
+  line-height: 32px;
+  line-height: 1.5;
+ }
+ 
+ span{
+    font-size: 12px;
+    vertical-align: middle;
+    background-color:orange;
+    }
+ */
+ 
+ 
+/*
+float
+clear
+*/
+/*
+h1, h2, p, img {
+   border: 1px solid #ddd;
+}
+ 
+img{
+  float: right;
+  width: 100px;
+} 
+
+h2{
+ clear: right;
+}
+*/

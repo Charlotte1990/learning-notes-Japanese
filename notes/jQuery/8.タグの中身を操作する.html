@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+     <meta charset="utf-8">
+     <title>jQuery</title>
+    
+ </head>
+  
+  <body>
+      <p>jQueryの練習</p>
+      <a href="http://google.com" data-sitename="google">Google</a>
+      <input type="text" value="hello">
+       
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script>
+            $(function(){
+              //text
+              //console.log($('p').text());       //値の取得
+              // $('p').text('just changed');     //設定
+              
+              //html
+              //$('p').html('<a href="">click me!</a>');
+               
+              //val
+              //console.log($('input').val());   //valueの取得
+              //$('input').val('hello, again!');
+              
+              //remove/empty
+             // $('p').empty();  //中身を削除
+              $('p').remove();   //要素自体を削除
+         
+              
+        });
+      </script>
+      
+  </body>
+  </html>
+     

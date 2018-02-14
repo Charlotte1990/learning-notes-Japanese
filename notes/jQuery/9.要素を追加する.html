@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+     <meta charset="utf-8">
+     <title>jQuery</title>
+    
+ </head>
+  
+  <body>
+      <p>jQueryの練習</p>
+      <ul>
+          <li>0</li>
+          <li>1</li>
+          <li>2</li>
+      </ul>
+       
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script>
+            $(function(){
+               //before/after -> insertBefore/insertAfter
+                 var li = $('<li>').text('just added');
+               //$('ul > li:eq(1)').before(li);
+               // li.insertBefore($('ul > li:eq(1)'));
+               
+              // prepend/append -> prependTo/appendTo
+              // $('ul').prepend(li);
+              // $('ul').append(li);
+                 li.appendTo( $('ul'));
+                 
+              
+        });
+      </script>
+      
+  </body>
+  </html>
+     

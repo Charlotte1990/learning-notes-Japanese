@@ -1,0 +1,22 @@
+
+create table users (
+   id int not null primary key auto_increment, 
+   name varchar(255),
+   email varchar(255),
+   team enum('blue', 'red', 'yellow'),
+   score double,
+   created datetime
+);
+
+insert into users (name,email,team,score,created) values
+('taguchi', 'taguchi@gmail.com', 'blue', '5.5', '2012-05-11 11:00:00' ),
+('fkoji', 'fkoji@dotinstall.com', 'yellow', '8.2', '2012-06-12 13:00:00' ),
+('Helen', 'helen@gmail.com', 'red', '2.3', '2012-06-14 10:00:00' ),
+('Kimurai', 'Kimura@gmail.com', 'blue', '4.5', '2012-05-18 15:00:00' ),
+('tanaka', 'tanaka@dotinstall.com', 'yellow', '7.4', '2012-05-24 14:00:00' ),
+('sasaki', 'sasaki@dotinstall.jp', 'red', '4.2', '2012-06-30 09:00:00' );
+
+
+
+
+

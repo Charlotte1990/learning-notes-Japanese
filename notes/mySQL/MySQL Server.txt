@@ -1,0 +1,12 @@
+cd C:\Program Files\MySQL\MySQL Server 5.6\bin
+
+mysql -h 10.14.6.69 -u smartsolavice -p
+mysql -u dbuser -p blog_app
+
+smartsolavice
+PW:smartsolavice
+
+dbuser
+PW:Baohou123
+
+

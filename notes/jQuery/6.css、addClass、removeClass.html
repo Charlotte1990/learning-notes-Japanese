@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+     <meta charset="utf-8">
+     <title>jQuery</title>
+     <style>
+     
+         .myStyle{
+             border: 5px solid green;
+             font-size: 48px;
+         
+         }
+     </style>
+
+  </head>
+  
+  <body>
+      <p>jQueryの練習</p>
+      
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script>
+            $(function(){
+            
+               //CSSの設定、取得
+               // $('p').css('color', 'red' ).css('background', 'blue');
+              //  console.log($('p').css('color')); //consoleで色設定の値を表示
+                
+             //addClass/removeClass
+               $('p').addClass('myStyle');
+             //$('p').removeClass('myStyle');
+            
+        });
+      </script>
+      
+  </body>
+  </html>
+     
