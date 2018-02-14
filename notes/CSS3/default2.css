@@ -1,0 +1,39 @@
+/*
+色
+ -rgba
+  -Red
+  -Green
+  -Blue
+  -Alpha(0-1) 透明度
+ -hsl/ hsla
+   -Hue 0-360 色相
+   -Saturation 0-100% （鮮やかさ）彩度
+   -Lightness  0-100%  (明るさ)輝度
+   -Alpha (0-1) 
+*/
+
+div{
+  width:100px;
+  height:50px;
+}
+
+#box1{
+  background: rgb(255, 100, 100);
+ 
+}
+
+#box2{
+  background: rgba(255, 100, 100, .2);
+
+}
+
+#box3{
+  background: hsla(210, 100%, 50%, .7);
+
+}
+
+#box4{
+  background: hsla(210, 100%, 40%, .7);
+
+}
+

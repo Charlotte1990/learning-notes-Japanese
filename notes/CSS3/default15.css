@@ -1,0 +1,36 @@
+/*
+transition
+
+transition-timing-function
+ -ease　開始と終了が滑らかになる。
+ -linear 等速度でアニメーション
+ -ease-in 開始がゆっくり
+ -ease-out　終了がゆっくり
+ -ease-in-out 開始と終了がゆっくり
+*/
+
+
+ div{
+  width: 100px;
+  height: 50px;
+  background: skyblue;
+  
+   
+ /* transition-property:all;
+  transition-duration:2s;
+  transition-timing-function:ease;
+  transition-delay:0.8s;*/
+  
+  /*一気に定義*/
+  transition: all 2s ease 0.8s;
+  
+
+  }
+  
+  div:hover{
+  width: 200px;
+  height: 50px;
+  background: blue;
+
+  }
+  

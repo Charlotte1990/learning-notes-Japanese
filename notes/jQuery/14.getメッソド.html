@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+     <meta charset="utf-8">
+     <title>jQuery</title>
+    
+ </head>
+  
+  <body>
+      <p>jQueryの練習</p>
+    <p> 
+    
+       <input type="text" name="name" id="name" >
+       <input type="button" value="Greet!">
+       
+       
+     </p>
+     <div id="result"></div>  
+    
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+      <script>
+            $(function(){
+             
+             $('#greet').click(function(){
+                      
+                 $.get('greet.php', {                //phpファイルから結果を持ってくる
+                      name: $('#name').val()        //val()メッソドは指定した要素のvalue属性の値を取得
+                 }, function(data){
+                     //  $('#result').html(data);                                     //一つの結果をresultの中に書き込む
+                         $('#result').html(data.message + '(' + data.length + ')');   //複数の結果をphpから持ってくる
+                 
+                 });
+             
+             
+             });
+        });
+      </script>
+      
+  </body>
+  </html>
+     

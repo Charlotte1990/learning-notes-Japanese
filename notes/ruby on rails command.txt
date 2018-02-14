@@ -1,0 +1,50 @@
+IDE環境動作確認
+rails s -b $IP -p $PORT
+
+完全なコマンド	        短縮形
+$ rails server	        $ rails s
+$ rails console	        $ rails c
+$ rails generate	$ rails g
+$ rails test	        $ rails t
+$ bundle install	$ bundle
+
+
+$ heroku create               　　新規
+$ git push heroku master【一回目】　　　$ git push heroku
+$ heroku rename [appName]     　　アプリリネーム
+$ heroku run rails db:migrate　　　データベースを動作させる
+
+############################################################
+元に戻す方法
+ $ rails generate controller StaticPages home help
+ $ rails destroy  controller StaticPages home help
+
+ $ rails generate model User name:string email:string
+ $ rails destroy model User
+
+ $ rails db:migrate
+ $ rails db:rollback
+ $ rails db:migrate VERSION=0
+
+############################################################
+
+プロセスの種類を指定してフィルタする
+  $ ps aux | grep spring
+
+kill -15 <pid>
+pkill -15 -f <プロセス名>
+
+不要なプロセスを排除する
+  $ kill -15 12241
+
+springプロセスたちを１つずつkill
+$ spring stop 　　　　できない時次に
+$ pkill -15 -f spring
+
+rubyのprocessをkill
+killall -9 ruby
+
+################################################
+$ bundle exec guard
+フルで実行したい場合は、guard>プロンプトでReturnキーを押します (このとき、Springサーバーに接続できないなどのエラーが表示されることがあります。問題を修正するには、もう一度Returnキーを押します)。
+Guardを終了するにはCtrl-Dキー

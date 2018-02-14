@@ -1,0 +1,17 @@
+/*
+擬似クラス 隣接してなくても、 特定位置の要素を確実に選択できる。
+
+-：first-child
+*/
+
+
+/*p:first-of-type*/
+ /* p:last-of-type*/
+ /*p:nth-of-type(3)*/
+ /*p:nth-last-of-type(4)*/
+ 
+ h2:only-of-type
+ {
+   background: violet;
+ 
+ }
